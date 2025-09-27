@@ -1,2 +1,40 @@
-# snap-game
-Simulating a simplified game of "Snap!" between two computer players using N Pack of standard playing cards
+# Snap! Card Game Simulation
+This is a simple C# console program that simulates a two-player game of Snap! using one or more standard decks of playing cards.
+
+# Design Patterns Used
+- ## Strategy Pattern
+  * This is used to make it best fit for Rules changing at runtime
+  * FaceMatchStrategy -> Matching by rank
+  * SuitMatchStrategy -> Matching by suit
+  * BothMatchStrategy -> Matches both rank and suit
+- ## Single Responsibility Pattern (SOLID)
+  * Card, Deck, Game logic and Match rules are separate
+- ## Open/Closed Principle (SOLID)
+  * New rules can be added without modifying existing code
+    
+# How to Run
+Requirements:
+
+.NET 8 SDK (or later)
+Setup:
+
+Create a new console project (dotnet new console -n Snap_test)
+Replace the contents of Program.cs with the code provided.
+Run the Game:
+
+Open a terminal in the project folder.
+Type dotnet run and press Enter.
+or you can run the application using F5
+
+# How to Play
+When prompted, enter:
+The number of card packs to use.
+The matching condition (face value, suit, or both).
+The program shuffles all cards and simulates the game.
+When two consecutive cards match the chosen condition, a random player "snaps" and wins those cards.
+At the end, the program shows how many cards each player won and announces the winner.
+
+# Notes
+Only standard playing card faces and suits are used.
+The game is fully automated and runs in the console.
+No external libraries are required.
